@@ -33,8 +33,12 @@ public class CustomMap<key, value> implements Map<key, value> {
 		return null;
 	}
 
+	/*
+	 * custom implementation of getting value using key.
+	 */
+
 	@Override
-	public value get(Object key) { // custom method written
+	public value get(Object key) {
 		// value v = null;
 
 		for (Entry<key, value> entry : entries)
@@ -56,8 +60,13 @@ public class CustomMap<key, value> implements Map<key, value> {
 		return null;
 	}
 
+	/*
+	 * custom implementation of storing key and value pair in a map using put
+	 * method.
+	 */
+
 	@Override
-	public value put(key k, value v) { // custom method written
+	public value put(key k, value v) {
 		for (Entry<key, value> entry : entries)
 			if (Objects.equals(entry.getKey(), k)) {
 				value v1 = entry.getValue();
@@ -90,17 +99,18 @@ public class CustomMap<key, value> implements Map<key, value> {
 	public Collection<value> values() {
 		return null;
 	}
-	
-	public key getKey(Object v)
-	{
-		for(Entry<key,value> entry : entries)
-			if(Objects.equals(entry.getValue(),v))
-			
+
+	/*
+	 * custom implementation of getting a key using value.
+	 */
+	public key getKey(Object v) {
+		for (Entry<key, value> entry : entries)
+			if (Objects.equals(entry.getValue(), v))
+
 				return entry.getKey();
-		
+
 		return null;
-				
-			
+
 	}
 
 }
