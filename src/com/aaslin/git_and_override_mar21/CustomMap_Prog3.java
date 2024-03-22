@@ -13,22 +13,22 @@
 package com.aaslin.git_and_override_mar21;
 
 import custom.CustomMap;
-import java.util.*;
-import java.util.Map.Entry;
 
 public class CustomMap_Prog3 {
 
 	public static void main(String[] args) {
-		CustomMap<String, Integer> customMap = new CustomMap<String, Integer>();
+		CustomMap<String, Integer> CustomMap = new CustomMap<String, Integer>();
 
-		customMap.put("Nikhila", 101);
+		CustomMap.put("Nikhila", 101);    //put() method 
 
-		customMap.put("Raghavi", 102);
+		CustomMap.put("Raghavi", 102);
 
-		customMap.put("Pranav", 103);
+		CustomMap.put("Pranav", 103);
 
-		System.out.println(customMap.get("Nikhila"));
+		System.out.println(CustomMap.get("Nikhila"));  //get() method for getting value using key
 
+		System.out.println(CustomMap.getKey(101));   //getKey() method for getting the key using value
+		                                             //i.e (getkey of this value) --> getKey(101)
 	}
 
 }
